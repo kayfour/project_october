@@ -1,5 +1,7 @@
 ### project_october ( 구직 정보 크롤링 프로그램 )
 ##### Django, MongoDB연동
+##### Beautifulsoup4, Selenium, Scheduler
+##### GOORM.IO 호스팅 가능
 
 ##### 프로그래머 : 박 건 진 
 ##### e-mail : kayfour@hanmail.net
