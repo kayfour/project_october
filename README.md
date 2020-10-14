@@ -14,5 +14,5 @@
 ###
 ### 구직 자료 화면
 <img src="https://github.com/kayfour/project_october/blob/master/datas/p_work.png">
-<img src="https://github.com/kayfour/project_october/blob/master/datas/p_work.png">  
+<img src="https://github.com/kayfour/project_october/blob/master/datas/p_kstart.png">  
   
