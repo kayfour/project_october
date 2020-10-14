@@ -5,14 +5,14 @@
 ##### e-mail : kayfour@hanmail.net
 
 ### 구직 정보 SOURCE
-<img src="https://github.com/kayfour/project_october/blob/master/datas/source.png">
-
+<img src="https://github.com/kayfour/project_october/blob/master/datas/s_work.png">
+<img src="https://github.com/kayfour/project_october/blob/master/datas/s_kstart.png">
 ###
 ### HOMEPAGE
 <img src="https://github.com/kayfour/project_october/blob/master/datas/homepage.png">
 
 ###
 ### 구직 자료 화면
-<img src="https://github.com/kayfour/project_october/blob/master/datas/listwithmongo.png">
-  
+<img src="https://github.com/kayfour/project_october/blob/master/datas/p_work.png">
+<img src="https://github.com/kayfour/project_october/blob/master/datas/p_work.png">  
   
