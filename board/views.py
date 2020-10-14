@@ -62,7 +62,7 @@ def listwithmongo(request):
 
 def listwithmongowithpaginator(request):
     data = request.GET.copy()
-    with MongoClient('mongodb://192.168.0.6:27017/')  as client:
+    with MongoClient('mongodb://127.0.0.1:27017/')  as client:
         mydb = client.mydb
         contact_list = mydb.economic.find({})			# get Collection with find()
         for info in contact_list:						# Cursor
@@ -78,3 +78,14 @@ def listwithmongowithpaginator(request):
         print(f"{row['title']}, {row['link']}")
 
     return render(request, 'board/listwithrawquerywithpaginator.html', context=data)
+
+from django.shortcuts import render
+
+def kstart(request):
+    data = request.GET.copy()
+    with MongoClient('mongodb://127.0.0.1:27017/') as client:
+        kstartup = client.kstartup
+        result = list(kstartup.kdbCollection.find({}))
+        data['page_buse']=result
+        
+        return render(request, 'board/kstart.html', context=data)

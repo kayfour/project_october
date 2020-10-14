@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body>
+       
+    <table class = "table table-striped">
+        <tr><td align="center"><H2> <a href="https://www.k-startup.go.kr/common/announcement/announcementList.do?mid=30004&bid=701&searchAppAt=A" target="_blank">K-STARTUP 창업모집 페이지 </a></H2></td></tr>
+    </table>
+    <table class = "table table-striped">
+        <tr> <th align="left">카테고리</th>  <th align="left">마감시한</th> <th align="left">제목</th> <th align="left">소제목</th><th align="left">집행기관</th><th align="left">마감일자</th></tr>
+        {% for row in page_buse.0 %}
+        <!-- 
+        <tr> <td>{{row.title}}</td> 
+        <td><a href="{{row.link}}"/>{{row.link}} </td> </tr>
+        -->
+        <tr>
+            <td>{{row.Category}}</td>
+            <td>{{row.Term}}</td>
+            <td>{{row.Title}}</td>
+            <td>{{row.sorting}}</td>
+            <td>{{row.Company}}</td>
+            <td>{{row.Due}}</td>
+            {% endfor %}
+        </tr>
+    </table>
+   </body>
+</html>

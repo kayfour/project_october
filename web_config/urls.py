@@ -29,6 +29,7 @@ urlpatterns = [
     path("hello/template/", helloview.template, name="template"),
     path("board/listwithrawquery/", boardview.listwithrawquery, name="listwithrawquery"),				# add
     path("board/listwithrawquerywithpaginator/", boardview.listwithrawquerywithpaginator, name="listwithrawquerywithpaginator"),				# add
-    path("board/listwithmongo/", boardview.listwithmongo, name="listwithmongo"),				# add
+    path("board/listwithmongo/", boardview.listwithmongo, name="listwithmongo"),
+    path("board/kstart/", boardview.kstart, name="kstart"),
     path("board/listwithmongowithpaginator/", boardview.listwithmongowithpaginator, name="listwithmongowithpaginator"),				# add
 ]
