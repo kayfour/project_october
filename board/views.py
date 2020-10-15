@@ -43,7 +43,7 @@ def listwithrawquerywithpaginator(request):
     return render(request, 'board/listwithrawquerywithpaginator.html', context=data)
 
 from pymongo import MongoClient
-from board.mongopaginator import MongoPaginator
+#from board.mongopaginator import MongoPaginator
 def listwithmongo(request):
     data = request.GET.copy()
     with MongoClient('mongodb://127.0.0.1:27017/')  as client:
@@ -64,15 +64,14 @@ def listwithmongowithpaginator(request):
     data = request.GET.copy()
     with MongoClient('mongodb://127.0.0.1:27017/')  as client:
         mydb = client.mydb
-        contact_list = mydb.economic.find({})			# get Collection with find()
+        contact_list = list(mydb.work.find({}))			# get Collection with find()
         for info in contact_list:						# Cursor
             print(info)
 
-    paginator = MongoPaginator(contact_list, 5) # Show 15 contacts per page.
+    paginator = Paginator(contact_list, 10) # Show 15 contacts per page.
 
     page_number = request.GET.get('page', 1)
     data['page_obj'] = paginator.get_page(page_number)
-
     page_obj=data['page_obj']
     for row in page_obj:
         print(f"{row['title']}, {row['link']}")
