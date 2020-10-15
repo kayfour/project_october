@@ -64,7 +64,7 @@ def listwithmongowithpaginator(request):
     data = request.GET.copy()
     with MongoClient('mongodb://127.0.0.1:27017/')  as client:
         mydb = client.mydb
-        contact_list = list(mydb.work.find({}))			# get Collection with find()
+        contact_list = list(mydb.work.find({}))		#리스트타입으로 해야한다.	# get Collection with find()
         for info in contact_list:						# Cursor
             print(info)
 
